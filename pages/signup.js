@@ -38,23 +38,35 @@ export default function Signup() {
       body: JSON.stringify({ name, email, password }),
     });
     const data = await res.json();
-    console.log(data);
-    setName("");
-    setEmail("");
-    setPassword("");
-    toast.success("Your account has been created!", {
-      position: "top-left",
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-    });
-    setTimeout(() => {
-      router.push("/login");
-    }, 1000);
+    if (data.success) {
+      setName("");
+      setEmail("");
+      setPassword("");
+      toast.success("Your account has been created!", {
+        position: "top-left",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      setTimeout(() => {
+        router.push("/login");
+      }, 1000);
+    } else {
+      toast.error(data.message, {
+        position: "top-left",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
   }
 
   return (

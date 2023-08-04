@@ -2,8 +2,16 @@ import User from "@/models/User";
 import connetDb from "@/middleware/mongoose";
 var CryptoJS = require("crypto-js");
 var jwt = require("jsonwebtoken");
+import NextCors from "nextjs-cors";
 
 const handler = async (req, res) => {
+  await NextCors(req, res, {
+    // Options
+    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
+    origin: "*",
+    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+  });
+
   if (req.method == "POST") {
     try {
       let user = await User.findOne({ email: req.body.email });
