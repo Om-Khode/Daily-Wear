@@ -5,15 +5,16 @@ const handler = async (req, res) => {
   if (req.method == "POST") {
     try {
       for (let i = 0; i < req.body.length; i++) {
+        let slug =
+          req.body.title.replace(/\s/g, "-") +
+          "-(" +
+          req.body[i].size +
+          "/" +
+          req.body[i].color +
+          ")";
         let p = new Product({
           title: req.body[i].title,
-          slug:
-            req.body[i].title +
-            " (" +
-            req.body[i].size +
-            "/" +
-            req.body[i].color +
-            ")",
+          slug: slug,
           desc: req.body[i].desc,
           img: req.body[i].img,
           category: req.body[i].category,
