@@ -80,17 +80,19 @@ export default function Post({ addToCart, buyNow, product, variants, error }) {
           <div className="lg:w-4/5 mx-auto flex flex-wrap justify-center">
             <img
               alt="ecommerce"
-              className="lg:w-[40%] w-full lg:h-auto px-24 object-cover object-top rounded"
+              className="lg:w-[40%] w-full lg:h-fit mt-auto mb-auto md:px-24 px-5 md:object-fill object-top rounded"
               src={product.img}
             />
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
               <h2 className="text-sm title-font text-gray-500 tracking-widest">
                 DAILY WEAR
               </h2>
-              <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
+              <h1 className="text-gray-900 md:text-3xl text-xl title-font font-medium mb-1">
                 {product.title} ({product.color}/{product.size})
               </h1>
-              <p className="leading-relaxed">{product.desc}</p>
+              <p className="leading-relaxed text-sm md:text-base">
+                {product.desc}
+              </p>
               <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
                 <div className="flex">
                   <span className="mr-3">Color</span>

@@ -95,7 +95,7 @@ export default function Navbar({
           <Link href={"/"}>
             <img
               className="md:h-[2rem] h-[2rem] m-3 "
-              src="/DailyWearLogo.png"
+              src="/assets/images/common/DailyWearLogo.png"
               alt="logo"
             />
           </Link>
@@ -138,13 +138,13 @@ export default function Navbar({
                 onMouseOver={() => {
                   setDropdown(true);
                 }}
-                className="text-xl md:text-3xl mx-2"
+                className="text-3xl md:text-3xl mx-2"
               />
             )}
           </span>
 
           <button onClick={toggleCart}>
-            <AiOutlineShoppingCart className="text-xl md:text-3xl" />
+            <AiOutlineShoppingCart className="text-3xl md:text-3xl" />
           </button>
         </div>
 

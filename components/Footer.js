@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center">
             <Link href="/">
               <img
-                src="/DailyWearLogo.png"
+                src="/assets/images/common/DailyWearLogo.png"
                 className="h-[2.2rem] mx-auto"
                 alt="logo"
               />

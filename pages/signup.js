@@ -67,7 +67,7 @@ export default function Signup() {
   }
 
   return (
-    <div className="min-h-screen my-5">
+    <div className="md:min-h-screen mb-12 md:mb-0 my-5">
       <Head>
         <title>Daily Wear - Sign up</title>
       </Head>
@@ -76,7 +76,7 @@ export default function Signup() {
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
             className="mx-auto h-10 w-auto"
-            src="/DailyWearLogo.png"
+            src="/assets/images/common/DailyWearLogo.png"
             alt="Your Company"
           />
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
