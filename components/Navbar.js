@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
@@ -23,21 +22,13 @@ export default function Navbar({
   const ref = useRef();
   const toggleCart = () => {
     setSidebar(!sidebar);
-
-    // if (ref.current.classList.contains("translate-x-full")) {
-    //   ref.current.classList.remove("translate-x-full");
-    //   ref.current.classList.add("translate-x-0");
-    // } else if (!ref.current.classList.contains("translate-x-full")) {
-    //   ref.current.classList.add("translate-x-full");
-    //   ref.current.classList.remove("translate-x-0");
-    // }
   };
 
   const [sidebar, setSidebar] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
-    // Object.keys(cart).length !== 0 && setSidebar(true);
+    Object.keys(cart).length !== 0 && setSidebar(true);
     let exempted = [
       "/checkout",
       "/order",
@@ -46,6 +37,13 @@ export default function Navbar({
       "/myaccount",
       "/login",
       "/forgot",
+      "/signup",
+      "/about",
+      "/contact",
+      "/hoodies",
+      "/tshirts",
+      "/mugs",
+      "/stickers",
     ];
     if (exempted.includes(router.pathname)) {
       setSidebar(false);
@@ -95,13 +93,17 @@ export default function Navbar({
       >
         <div className="logo mr-auto md:mx-5">
           <Link href={"/"}>
-            <Image width={200} height={40} src="/logo.jpeg" alt="logo" />
+            <img
+              className="md:h-[2rem] h-[2rem] m-3 "
+              src="/DailyWearLogo.png"
+              alt="logo"
+            />
           </Link>
         </div>
         <div className="nav">
-          <ul className="flex items-center space-x-6 font-bold md:text-md">
+          <ul className="flex items-center space-x-6 font-semibold md:text-md">
             <Link href={"/tshirts"}>
-              <li className="hover:text-pink-700">Tshirts</li>
+              <li className="hover:text-pink-700">T-shirts</li>
             </Link>
             <Link href={"/hoodies"}>
               <li className="hover:text-pink-700">Hoodies</li>
@@ -114,10 +116,10 @@ export default function Navbar({
             </Link>
           </ul>
         </div>
-        <div className="cart cursor-pointer absolute right-0 mx-5 top-4 flex">
+        <div className="cart cursor-pointer absolute right-0 mx-5 top-4 flex mt-1">
           {!user.value && (
             <Link href={"/login"}>
-              <button className="bg-pink-600 px-2 py-1 rounded-md text-sm text-white mx-2">
+              <button className="bg-pink-600 px-3 md:py-2 py-1 rounded-md text-sm text-white md:mx-4 mx-2">
                 Login
               </button>
             </Link>

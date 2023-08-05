@@ -4,6 +4,7 @@ import { BsFillBagCheckFill } from "react-icons/bs";
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Head from "next/head";
 
 export default function Checkout({
   cart,
@@ -132,7 +133,10 @@ export default function Checkout({
   };
 
   return (
-    <div className="container m-auto w-[90vw] md:w-[80vw] min-h-screen">
+    <div className="container m-auto w-[90vw] md:w-[80vw] min-h-screen mb-20">
+      <Head>
+        <title>Checkout</title>
+      </Head>
       <ToastContainer
         position="top-left"
         autoClose={5000}
@@ -147,8 +151,8 @@ export default function Checkout({
       />
       <h1 className="font-bold text-3xl my-8 text-center">Checkout</h1>
       <h2 className="font-semibold text-xl">1. Delivery Details</h2>
-      <div className="mx-auto flex my-2">
-        <div className="px-2 w-1/2">
+      <div className="mx-auto flex my-2 md:flex-row flex-col">
+        <div className="px-2 md:w-1/2 w-full">
           <div className="mb-4">
             <label htmlFor="name" className="leading-7 text-sm text-gray-600">
               Name
@@ -163,7 +167,7 @@ export default function Checkout({
             />
           </div>
         </div>
-        <div className="px-2 w-1/2">
+        <div className="px-2 md:w-1/2 w-full">
           <div className="mb-4">
             <label htmlFor="email" className="leading-7 text-sm text-gray-600">
               Email
@@ -206,8 +210,8 @@ export default function Checkout({
           ></textarea>
         </div>
       </div>
-      <div className="mx-auto flex my-2">
-        <div className="px-2 w-1/2">
+      <div className="mx-auto flex md:flex-row flex-col my-2">
+        <div className="px-2 md:w-1/2 w-full">
           <div className="mb-4">
             <label htmlFor="phone" className="leading-7 text-sm text-gray-600">
               Phone Number
@@ -223,7 +227,7 @@ export default function Checkout({
             />
           </div>
         </div>
-        <div className="px-2 w-1/2">
+        <div className="px-2 md:w-1/2 w-full">
           <div className="mb-4">
             <label
               htmlFor="pincode"
@@ -242,8 +246,8 @@ export default function Checkout({
           </div>
         </div>
       </div>
-      <div className="mx-auto flex my-2">
-        <div className="px-2 w-1/2">
+      <div className="mx-auto flex md:flex-row flex-col my-2">
+        <div className="px-2 md:w-1/2 w-full">
           <div className="mb-4">
             <label htmlFor="state" className="leading-7 text-sm text-gray-600">
               State
@@ -258,7 +262,7 @@ export default function Checkout({
             />
           </div>
         </div>
-        <div className="px-2 w-1/2">
+        <div className="px-2 md:w-1/2 w-full">
           <div className="mb-4">
             <label htmlFor="city" className="leading-7 text-sm text-gray-600">
               District
@@ -276,7 +280,7 @@ export default function Checkout({
       </div>
 
       <h2 className="font-semibold text-xl">2. Review Cart Items & Pay</h2>
-      <div className=" sidebar bg-pink-100 p-6 m-2 ">
+      <div className="sidebar bg-pink-100 p-6 m-2">
         <ol className="list-decimal font-semibold">
           {Object.keys(cart).length == 0 && (
             <div className="my-4 font-semibold">Your cart is Empty!</div>
@@ -286,7 +290,6 @@ export default function Checkout({
               <li key={k}>
                 <div className="item flex my-3 font-semibold">
                   <div className="font-semibold">
-                    {" "}
                     {cart[k].name} ({cart[k].variant}/{cart[k].size})
                   </div>
                   <div className="w-1/3 font-semibold flex items-center justify-center text-lg">

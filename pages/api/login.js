@@ -26,10 +26,12 @@ const handler = async (req, res) => {
         } else {
           res
             .status(400)
-            .json({ success: false, error: "Invalid Credentials" });
+            .json({ success: false, message: "Invalid Credentials" });
         }
       } else {
-        res.status(400).json({ success: false, error: "User not found" });
+        res
+          .status(400)
+          .json({ success: false, message: "Invalid Credentials" });
       }
     } catch (error) {
       res.status(500).json({
@@ -39,7 +41,7 @@ const handler = async (req, res) => {
       });
     }
   } else {
-    res.status(400).json({ success: false, error: "This is not allowed" });
+    res.status(400).json({ success: false, message: "This is not allowed" });
   }
 };
 

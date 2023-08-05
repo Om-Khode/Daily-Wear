@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Error from "next/error";
+import Head from "next/head";
 
 export default function Post({ addToCart, buyNow, product, variants, error }) {
   const router = useRouter();
@@ -69,6 +70,11 @@ export default function Post({ addToCart, buyNow, product, variants, error }) {
   return (
     <>
       <section className="text-gray-600 body-font overflow-hidden min-h-screen">
+        <Head>
+          <title>
+            {product.title} ({product.color}/{product.size})
+          </title>
+        </Head>
         <ToastContainer
           position="top-right"
           autoClose={1000}
@@ -90,7 +96,7 @@ export default function Post({ addToCart, buyNow, product, variants, error }) {
             />
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
               <h2 className="text-sm title-font text-gray-500 tracking-widest">
-                CODESWARE
+                DAILY WEAR
               </h2>
               <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
                 {product.title} ({product.color}/{product.size})

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -55,7 +56,7 @@ export default function Login() {
         router.push("/");
       }, 1000);
     } else {
-      toast.error(data.error, {
+      toast.error(data.message, {
         position: "top-left",
         autoClose: 1000,
         hideProgressBar: false,
@@ -70,6 +71,9 @@ export default function Login() {
 
   return (
     <div className="min-h-screen mt-10">
+      <Head>
+        <title>Login</title>
+      </Head>
       <ToastContainer
         position="top-left"
         autoClose={1000}
@@ -86,7 +90,7 @@ export default function Login() {
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
             className="mx-auto h-10 w-auto"
-            src="/logo.jpeg"
+            src="/DailyWearLogo.png"
             alt="Your Company"
           />
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">

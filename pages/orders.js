@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
@@ -27,6 +28,9 @@ export default function orders() {
   }, []);
   return (
     <div className="min-h-screen">
+      <Head>
+        <title>Orders</title>
+      </Head>
       <h1 className="font-semibold text-center p-8 text-2xl">My Orders</h1>
       <div className="container mx-auto">
         <div className="flex flex-col w-[90vw] m-auto">
@@ -64,7 +68,7 @@ export default function orders() {
                             {item.email}
                           </td>
                           <td className="whitespace-nowrap px-6 py-4">
-                            {item.amount}
+                            ₹{item.amount}
                           </td>
                           <td className="whitespace-nowrap px-6 py-4">
                             <Link href={"/order?id=" + item._id}>Details</Link>

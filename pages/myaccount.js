@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
@@ -135,6 +136,9 @@ export default function MyAccount() {
 
   return (
     <div className="container mx-auto my-9 min-h-screen w-[90vw] md:w-[80vw]">
+      <Head>
+        <title>My Account</title>
+      </Head>
       <ToastContainer
         position="top-left"
         autoClose={5000}
@@ -147,10 +151,12 @@ export default function MyAccount() {
         pauseOnHover
         theme="light"
       />
-      <h1 className="text-3xl text-center font-bold">Update your Account</h1>
+      <h1 className="text-3xl text-center font-bold m-4">
+        Update your Account
+      </h1>
       <h2 className="font-semibold text-xl">1. Delivery Details</h2>
-      <div className="mx-auto flex my-2">
-        <div className="px-2 w-1/2">
+      <div className="mx-auto flex md:flex-row flex-col my-2">
+        <div className="px-2 md:w-1/2 w-full">
           <div className="mb-4">
             <label htmlFor="name" className="leading-7 text-sm text-gray-600">
               Name
@@ -165,7 +171,7 @@ export default function MyAccount() {
             />
           </div>
         </div>
-        <div className="px-2 w-1/2">
+        <div className="px-2 md:w-1/2 w-full">
           <div className="mb-4">
             <label htmlFor="email" className="leading-7 text-sm text-gray-600">
               Email (cannot be updated)
@@ -208,8 +214,8 @@ export default function MyAccount() {
           ></textarea>
         </div>
       </div>
-      <div className="mx-auto flex my-2">
-        <div className="px-2 w-1/2">
+      <div className="mx-auto flex md:flex-row flex-col my-2">
+        <div className="px-2 md:w-1/2 w-full">
           <div className="mb-4">
             <label htmlFor="phone" className="leading-7 text-sm text-gray-600">
               Phone Number
@@ -225,7 +231,7 @@ export default function MyAccount() {
             />
           </div>
         </div>
-        <div className="px-2 w-1/2">
+        <div className="px-2 md:w-1/2 w-full">
           <div className="mb-4">
             <label
               htmlFor="pincode"
@@ -251,8 +257,8 @@ export default function MyAccount() {
         Submit
       </button>
       <h2 className="font-semibold text-xl">2. Change Password</h2>
-      <div className="mx-auto flex my-2">
-        <div className="px-2 w-1/2">
+      <div className="mx-auto flex md:flex-row flex-col my-2">
+        <div className="px-2 md:w-1/2 w-full">
           <div className="mb-4">
             <label
               htmlFor="password"
@@ -270,7 +276,7 @@ export default function MyAccount() {
             />
           </div>
         </div>
-        <div className="px-2 w-1/2">
+        <div className="px-2 md:w-1/2 w-full">
           <div className="mb-4">
             <label
               htmlFor="npassword"
@@ -288,7 +294,7 @@ export default function MyAccount() {
             />
           </div>
         </div>
-        <div className="px-2 w-1/2">
+        <div className="px-2 md:w-1/2 w-full">
           <div className="mb-4">
             <label
               htmlFor="cpassword"

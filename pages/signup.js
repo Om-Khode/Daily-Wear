@@ -1,4 +1,5 @@
 import { set } from "mongoose";
+import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
@@ -71,6 +72,9 @@ export default function Signup() {
 
   return (
     <div className="min-h-screen my-5">
+      <Head>
+        <title>Sign up</title>
+      </Head>
       <ToastContainer
         position="top-left"
         autoClose={1000}
@@ -87,7 +91,7 @@ export default function Signup() {
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
             className="mx-auto h-10 w-auto"
-            src="/logo.jpeg"
+            src="/DailyWearLogo.png"
             alt="Your Company"
           />
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">

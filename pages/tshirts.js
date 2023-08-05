@@ -3,10 +3,14 @@ import React from "react";
 import Product from "@/models/Product";
 import connetDb from "@/middleware/mongoose";
 import mongoose from "mongoose";
+import Head from "next/head";
 
 export default function Tshirts({ products }) {
   return (
     <div>
+      <Head>
+        <title>T-shirts</title>
+      </Head>
       <section className="text-gray-600 body-font min-h-screen">
         <div className="container px-5 py-12 mx-auto">
           <div className="flex flex-wrap mt-0 w-[80vw] mx-auto">
