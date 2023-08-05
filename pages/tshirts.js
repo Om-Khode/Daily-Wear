@@ -83,6 +83,9 @@ export default function Tshirts({ products }) {
                       {products[item].color.includes("Blue") && (
                         <button className="border-2 border-gray-300 ml-1 bg-blue-500 rounded-full w-6 h-6 focus:outline-none"></button>
                       )}
+                      {products[item].color.includes("Yellow") && (
+                        <button className="border-2 border-gray-300 ml-1 bg-yellow-300 rounded-full w-6 h-6 focus:outline-none"></button>
+                      )}
                     </div>
                     <Link href={`product/${products[item].slug}`}>
                       <button className="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 mt-4 px-4 rounded">

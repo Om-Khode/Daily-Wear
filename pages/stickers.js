@@ -66,8 +66,13 @@ export default function Stickers({ products }) {
                           XXL
                         </span>
                       )}
+                      {products[item].size.includes("STANDARD") && (
+                        <span className="border border-gray-300 px-1">
+                          STANDARD
+                        </span>
+                      )}
                     </div>
-                    <div className="mt-1">
+                    <div className="mt-2">
                       {products[item].color.includes("White") && (
                         <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
                       )}

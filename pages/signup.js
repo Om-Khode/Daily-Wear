@@ -51,9 +51,7 @@ export default function Signup() {
         progress: undefined,
         theme: "light",
       });
-      setTimeout(() => {
-        router.push("/login");
-      }, 1000);
+      router.push("/login");
     } else {
       toast.error(data.message, {
         position: "top-left",

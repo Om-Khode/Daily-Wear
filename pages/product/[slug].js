@@ -9,6 +9,7 @@ import Head from "next/head";
 export default function Post({ addToCart, buyNow, product, variants, error }) {
   const router = useRouter();
   const { slug } = router.query;
+  console.log(slug);
 
   const [pin, setPin] = useState();
   const [service, setService] = useState();
@@ -124,7 +125,7 @@ export default function Post({ addToCart, buyNow, product, variants, error }) {
                     Object.keys(variants["Green"]).includes(size) && (
                       <button
                         onClick={(e) => refreshVariant(size, "Green")}
-                        className={`border-2 border-gray-300 ml-1 bg-green-500 rounded-full w-6 h-6 focus:outline-none ${
+                        className={`border-2 border-gray-300 ml-1 bg-green-600 rounded-full w-6 h-6 focus:outline-none ${
                           color === "Green" ? "border-black" : "border-gray-300"
                         }`}
                       ></button>
@@ -135,6 +136,17 @@ export default function Post({ addToCart, buyNow, product, variants, error }) {
                         onClick={(e) => refreshVariant(size, "Blue")}
                         className={`border-2 border-gray-300 ml-1 bg-blue-500 rounded-full w-6 h-6 focus:outline-none ${
                           color === "Blue" ? "border-black" : "border-gray-300"
+                        }`}
+                      ></button>
+                    )}
+                  {Object.keys(variants).includes("Yellow") &&
+                    Object.keys(variants["Yellow"]).includes(size) && (
+                      <button
+                        onClick={(e) => refreshVariant(size, "Yellow")}
+                        className={`border-2 border-gray-300 ml-1 bg-yellow-300 rounded-full w-6 h-6 focus:outline-none ${
+                          color === "Yellow"
+                            ? "border-black"
+                            : "border-gray-300"
                         }`}
                       ></button>
                     )}
@@ -159,6 +171,10 @@ export default function Post({ addToCart, buyNow, product, variants, error }) {
                       {color && Object.keys(variants[color]).includes("XL") && (
                         <option>XL</option>
                       )}
+                      {color &&
+                        Object.keys(variants[color]).includes("STANDARD") && (
+                          <option>STANDARD</option>
+                        )}
                     </select>
                     <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
                       <svg

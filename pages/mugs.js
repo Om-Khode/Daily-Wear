@@ -66,8 +66,13 @@ export default function Mugs({ products }) {
                           XXL
                         </span>
                       )}
+                      {products[item].size.includes("STANDARD") && (
+                        <span className="border border-gray-300 px-1">
+                          STANDARD
+                        </span>
+                      )}
                     </div>
-                    <div className="mt-1">
+                    <div className="mt-2">
                       {products[item].color.includes("White") && (
                         <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
                       )}
@@ -78,10 +83,13 @@ export default function Mugs({ products }) {
                         <button className="border-2 border-gray-300 ml-1 bg-red-500 rounded-full w-6 h-6 focus:outline-none"></button>
                       )}
                       {products[item].color.includes("Green") && (
-                        <button className="border-2 border-gray-300 ml-1 bg-green-500 rounded-full w-6 h-6 focus:outline-none"></button>
+                        <button className="border-2 border-gray-300 ml-1 bg-green-600 rounded-full w-6 h-6 focus:outline-none"></button>
                       )}
                       {products[item].color.includes("Blue") && (
                         <button className="border-2 border-gray-300 ml-1 bg-blue-500 rounded-full w-6 h-6 focus:outline-none"></button>
+                      )}
+                      {products[item].color.includes("Yellow") && (
+                        <button className="border-2 border-gray-300 ml-1 bg-yellow-300 rounded-full w-6 h-6 focus:outline-none"></button>
                       )}
                     </div>
                     <Link href={`product/${products[item].slug}`}>
