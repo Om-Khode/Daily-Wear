@@ -7,7 +7,14 @@ const handler = async (req, res) => {
       for (let i = 0; i < req.body.length; i++) {
         let p = new Product({
           title: req.body[i].title,
-          slug: req.body[i].slug,
+          slug:
+            req.body[i].title +
+            " " +
+            "(" +
+            req.body[i].size +
+            "/" +
+            req.body[i].color +
+            ")",
           desc: req.body[i].desc,
           img: req.body[i].img,
           category: req.body[i].category,
@@ -20,13 +27,11 @@ const handler = async (req, res) => {
       }
       res.status(200).json({ success: true });
     } catch (error) {
-      res
-        .status(500)
-        .json({
-          success: false,
-          error: error,
-          message: "Internal server error!",
-        });
+      res.status(500).json({
+        success: false,
+        error: error,
+        message: "Internal server error!",
+      });
     }
   } else {
     res.status(400).json({ error: "This is not allowed" });

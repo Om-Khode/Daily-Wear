@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React from "react";
 import Product from "@/models/Product";
-import connetDb from "@/middleware/mongoose";
 import mongoose from "mongoose";
 import Head from "next/head";
 
@@ -10,7 +9,7 @@ export default function Mugs({ products }) {
     <div>
       <section className="text-gray-600 body-font min-h-screen">
         <Head>
-          <title>Mugs</title>
+          <title>Daily Wear - Mugs</title>
         </Head>
         <div className="container px-5 py-12 mx-auto">
           <div className="flex flex-wrap mt-0 w-[80vw] mx-auto">

@@ -22,13 +22,13 @@ export default function MyOrder({ order, clearCart }) {
   return (
     <section className="text-gray-600 body-font overflow-hidden min-h-screen">
       <Head>
-        <title>Order</title>
+        <title>Daily Wear - Order</title>
       </Head>
       <div className="container px-5 md:py-24 py-12 mx-auto">
         <div className="lg:w-4/5 mx-auto flex flex-wrap">
           <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
             <h2 className="text-sm title-font text-gray-500 tracking-widest">
-              CODESWEAR.COM
+              DAILY WEAR
             </h2>
             <h1 className="text-gray-900 text-xl md:text-3xl title-font font-medium mb-4">
               Order Id: #{order.orderId}

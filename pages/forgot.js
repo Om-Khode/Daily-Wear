@@ -76,7 +76,7 @@ export default function Forgot() {
     <div>
       <div className="flex min-h-[78vh] flex-col justify-center px-6 py-12 lg:px-8">
         <Head>
-          <title>Forgot Password</title>
+          <title>Daily Wear - Forgot Password</title>
         </Head>
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img

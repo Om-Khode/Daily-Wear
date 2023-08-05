@@ -1,10 +1,9 @@
-import { set } from "mongoose";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
+import "/dist/ReactToastify.css";
 
 export default function Signup() {
   const [name, setName] = useState("");
@@ -73,20 +72,9 @@ export default function Signup() {
   return (
     <div className="min-h-screen my-5">
       <Head>
-        <title>Sign up</title>
+        <title>Daily Wear - Sign up</title>
       </Head>
-      <ToastContainer
-        position="top-left"
-        autoClose={1000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
+
       <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img

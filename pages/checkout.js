@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
 import { BsFillBagCheckFill } from "react-icons/bs";
 import { useRouter } from "next/navigation";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import Head from "next/head";
 
 export default function Checkout({
@@ -135,20 +134,8 @@ export default function Checkout({
   return (
     <div className="container m-auto w-[90vw] md:w-[80vw] min-h-screen mb-20">
       <Head>
-        <title>Checkout</title>
+        <title>Daily Wear - Checkout</title>
       </Head>
-      <ToastContainer
-        position="top-left"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
       <h1 className="font-bold text-3xl my-8 text-center">Checkout</h1>
       <h2 className="font-semibold text-xl">1. Delivery Details</h2>
       <div className="mx-auto flex my-2 md:flex-row flex-col">

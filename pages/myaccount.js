@@ -1,8 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 
 export default function MyAccount() {
   const [name, setName] = useState("");
@@ -137,20 +136,9 @@ export default function MyAccount() {
   return (
     <div className="container mx-auto my-9 min-h-screen w-[90vw] md:w-[80vw]">
       <Head>
-        <title>My Account</title>
+        <title>Daily Wear - My Account</title>
       </Head>
-      <ToastContainer
-        position="top-left"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
+
       <h1 className="text-3xl text-center font-bold m-4">
         Update your Account
       </h1>

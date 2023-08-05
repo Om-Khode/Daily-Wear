@@ -29,7 +29,7 @@ export default function orders() {
   return (
     <div className="min-h-screen">
       <Head>
-        <title>Orders</title>
+        <title>Daily Wear - Orders</title>
       </Head>
       <h1 className="font-semibold text-center p-8 text-2xl">My Orders</h1>
       <div className="container mx-auto">

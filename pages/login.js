@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
@@ -52,9 +51,7 @@ export default function Login() {
         progress: undefined,
         theme: "light",
       });
-      setTimeout(() => {
-        router.push("/");
-      }, 1000);
+      router.push("/");
     } else {
       toast.error(data.message, {
         position: "top-left",
@@ -72,20 +69,8 @@ export default function Login() {
   return (
     <div className="min-h-screen mt-10">
       <Head>
-        <title>Login</title>
+        <title>Daily Wear - Login</title>
       </Head>
-      <ToastContainer
-        position="top-left"
-        autoClose={1000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
       <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
