@@ -4,7 +4,7 @@ import "@/styles/globals.css";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import LoadingBar from "react-top-loading-bar";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function App({ Component, pageProps }) {
@@ -29,7 +29,16 @@ export default function App({ Component, pageProps }) {
         saveCart(JSON.parse(localStorage.getItem("cart")));
       }
     } catch (error) {
-      console.log(error);
+      toast.error(error, {
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       localStorage.clear();
     }
     const myuser = JSON.parse(localStorage.getItem("myuser"));
@@ -81,7 +90,6 @@ export default function App({ Component, pageProps }) {
   const clearCart = () => {
     setCart({});
     saveCart({});
-    console.log("Cart has been cleared!");
   };
 
   const removeFromCart = (itemCode, qty, price, name, size, variant) => {

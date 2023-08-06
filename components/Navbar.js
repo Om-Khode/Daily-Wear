@@ -103,16 +103,40 @@ export default function Navbar({
         <div className="nav">
           <ul className="flex items-center space-x-6 font-semibold md:text-md">
             <Link href={"/tshirts"}>
-              <li className="hover:text-pink-700">T-shirts</li>
+              <li
+                className={`hover:text-pink-700 ${
+                  router.pathname === "/tshirts" && "text-pink-500"
+                }`}
+              >
+                T-shirts
+              </li>
             </Link>
             <Link href={"/hoodies"}>
-              <li className="hover:text-pink-700">Hoodies</li>
+              <li
+                className={`hover:text-pink-700 ${
+                  router.pathname === "/hoodies" && "text-pink-500"
+                }`}
+              >
+                Hoodies
+              </li>
             </Link>
             <Link href={"/stickers"}>
-              <li className="hover:text-pink-700">Stickers</li>
+              <li
+                className={`hover:text-pink-700 ${
+                  router.pathname === "/stickers" && "text-pink-500"
+                }`}
+              >
+                Stickers
+              </li>
             </Link>
             <Link href={"/mugs"}>
-              <li className="hover:text-pink-700">Mugs</li>
+              <li
+                className={`hover:text-pink-700 ${
+                  router.pathname === "/mugs" && "text-pink-500"
+                }`}
+              >
+                Mugs
+              </li>
             </Link>
           </ul>
         </div>

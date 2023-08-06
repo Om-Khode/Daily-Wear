@@ -9,7 +9,6 @@ import Head from "next/head";
 export default function Post({ addToCart, buyNow, product, variants, error }) {
   const router = useRouter();
   const { slug } = router.query;
-  console.log(slug);
 
   const [pin, setPin] = useState();
   const [service, setService] = useState();
@@ -59,6 +58,8 @@ export default function Post({ addToCart, buyNow, product, variants, error }) {
   };
 
   const refreshVariant = (newsize, newcolor) => {
+    setSize(newsize);
+    setColor(newcolor);
     let url = `${process.env.NEXT_PUBLIC_HOST}/product/${variants[newcolor][newsize]["slug"]}`;
     router.push(url);
   };

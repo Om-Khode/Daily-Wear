@@ -54,7 +54,6 @@ export default function Checkout({
   };
 
   useEffect(() => {
-    console.log(email);
     if (name && email && address && phone && pincode) {
       setDisabled(false);
     } else {

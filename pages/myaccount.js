@@ -81,7 +81,6 @@ export default function MyAccount() {
         }
       );
       res = await a.json();
-      console.log(res);
     } else {
       res = { success: false };
     }

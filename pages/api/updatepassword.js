@@ -18,7 +18,6 @@ const handler = async (req, res) => {
         decryptedPass == '"' + req.body.password + '"' &&
         req.body.npassword == req.body.cpassword
       ) {
-        console.log("yess");
         await User.findOneAndUpdate(
           { email: dbuser.email },
           {
