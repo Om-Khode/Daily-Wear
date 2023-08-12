@@ -1,12 +1,3 @@
-<head>
-  <style>
-    /* Change the color of links in the table of contents to white */
-    .table-of-contents a {
-      color: white;
-    }
-  </style>
-</head>
-
 # Daily Wear - Ecommerce Clothes Website
 
 Welcome to the **Daily Wear** Next.js project! This is a modern ecommerce website for buying a variety of clothing items including t-shirts, hoodies, mugs, and stickers. The project is designed to provide a seamless shopping experience with a focus on user-friendly navigation and responsive design.
@@ -28,6 +19,8 @@ Welcome to the **Daily Wear** Next.js project! This is a modern ecommerce websit
 ## [Introduction](#introduction)
 
 **Daily Wear** is an ecommerce website that specializes in offering a variety of clothing items including t-shirts, hoodies, mugs, and stickers. The project is built using Next.js, a popular React framework for building modern web applications.
+
+$${\color{red}Red}$$
 
 ## [Features](#features)
 
