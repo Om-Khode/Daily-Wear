@@ -16,11 +16,9 @@ Welcome to the **Daily Wear** Next.js project! This is a modern ecommerce websit
 
 </div>
 
-## [Introduction](#introduction)
+## [${\color{White}Introduction}$](#introduction)
 
 **Daily Wear** is an ecommerce website that specializes in offering a variety of clothing items including t-shirts, hoodies, mugs, and stickers. The project is built using Next.js, a popular React framework for building modern web applications.
-
-$${\color{red}Red}$$
 
 ## [Features](#features)
 
