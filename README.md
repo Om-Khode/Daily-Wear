@@ -11,6 +11,7 @@ Welcome to the **Daily Wear** Next.js project! This is a modern ecommerce websit
 - [Getting Started](#getting-started)
 - [Technologies Used](#technologies-used)
 - [Pages](#pages)
+- [Test Credentials](#test-credentials)
 - [Contributing](#contributing)
 - [License](#license)
 
