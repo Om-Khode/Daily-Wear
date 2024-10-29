@@ -72,6 +72,15 @@ JWT_SECRET=<your-jwt-secret>
 - **Login**: User login page.
 - **Signup**: User signup page.
 
+## [Test Credentials](#test-credentials)
+
+To explore the Aqua Pura app without creating a new account, use the following test credentials to log in:
+
+- Email: test.dev20154@gmail.com
+- Password: Test@123
+
+Once logged in, you can explore the app features, make predictions, and save results. If you wish, you can create a personal account for continued use.
+
 ## [Contributing](#contributing)
 
 Contributions are welcome! If you'd like to contribute to this project, please follow the standard GitHub pull request process.
